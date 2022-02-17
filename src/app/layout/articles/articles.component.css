@@ -1,0 +1,30 @@
+.article {
+  height: 350px;
+  border: 0;
+  cursor: pointer;
+}
+.card:hover .card-title {
+  color: #1873e8;
+}
+
+.author {
+  color: #1873e8;
+  display: block;
+  font-size: 12px;
+}
+.date {
+  color: #898989;
+  font-size: 11px;
+}
+.card figure img {
+  transition: 0.5s ease-in-out;
+}
+figure {
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card:hover figure img {
+  transform: scale(1.1);
+}

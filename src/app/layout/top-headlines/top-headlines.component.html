@@ -1,0 +1,30 @@
+<div class="container-fluid pt-0">
+  <div class="row top-headline">
+    <div class="col-md-12 p-0">
+      <ngb-carousel *ngIf="topHeadlines">
+        <ng-template ngbSlide *ngFor="let headline of topHeadlines">
+          <div>
+            <div
+              class="image"
+              [ngStyle]="{
+                'background-image': headline?.urlToImage
+                  ? 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(' +
+                    headline?.urlToImage +
+                    ')'
+                  : 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) )',
+                height: '100%'
+              }"
+              alt="Random slide"
+            ></div>
+            <div class="carousel-caption">
+              <h3>{{ headline?.title }}</h3>
+              <p>
+                <span (click)="readMore(headline?.url)">Read More</span>
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+</div>

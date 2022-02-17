@@ -1,0 +1,25 @@
+<div class="container-fluid col-lg-9">
+  <div class="row">
+    <div *ngFor="let article of articleList" class="col-lg-3 mt-3">
+      <div class="card article" (click)="readMore(article?.url)">
+        <figure>
+          <img
+            [src]="article?.urlToImage"
+            class="card-img-top"
+            alt="Image not available"
+            loading="lazy"
+          />
+        </figure>
+        <div class="card-body p-0">
+          <h5 class="card-title">{{ article?.title }}</h5>
+          <p class="author mb-1">
+            {{ article?.author }}
+          </p>
+          <p class="date">
+            {{ article?.publishedAt | date: "medium" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

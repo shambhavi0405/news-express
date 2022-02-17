@@ -1,0 +1,142 @@
+<nav class="navbar navbar-dark py-0 bg-dark">
+  <div class="container-fluid">
+    <h1 class="navbar-brand pt-0 pb-0">
+      <em class="title ms-2"><i class="fa fa-globe icon"></i> NewsExpress</em>
+    </h1>
+    <h4 class="date">{{ date | date }}</h4>
+  </div>
+</nav>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light py-3 header">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'general' }"
+          (click)="changeCategory('general')"
+        >
+          Home<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'in' }"
+          (click)="changeCategory('in')"
+        >
+          India
+        </a>
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'business' }"
+          (click)="changeCategory('business')"
+        >
+          Business</a
+        >
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'health' }"
+          (click)="changeCategory('health')"
+        >
+          Health
+        </a>
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'sports' }"
+          (click)="changeCategory('sports')"
+        >
+          Sports
+        </a>
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'science' }"
+          (click)="changeCategory('science')"
+        >
+          Science
+        </a>
+      </li>
+      <li
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#"
+          [ngClass]="{ active: selectedCategory == 'technology' }"
+          (click)="changeCategory('technology')"
+        >
+          Technology
+        </a>
+      </li>
+    </ul>
+  </div>
+  <form class="d-flex">
+    <input
+      class="form-control me-2"
+      type="search"
+      [(ngModel)]="searchQuery"
+      name="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <span class="input-group-text border-0 p-1" id="search-addon">
+      <i (click)="onSearch()" class="fa fa-search"></i>
+    </span>
+  </form>
+</nav>
+<h4>
+  <marquee class="message"
+    ><em>For more updates subscribe to our channel &copy;NewsExpress!!</em>
+  </marquee>
+</h4>
