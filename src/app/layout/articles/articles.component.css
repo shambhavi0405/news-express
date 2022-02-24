@@ -2,6 +2,7 @@
   height: 350px;
   border: 0;
   cursor: pointer;
+  background-color: transparent;
 }
 .card:hover .card-title {
   color: #1873e8;
@@ -13,7 +14,7 @@
   font-size: 12px;
 }
 .date {
-  color: #898989;
+  color: #fff;
   font-size: 11px;
 }
 .card figure img {
@@ -27,4 +28,12 @@ figure {
 }
 .card:hover figure img {
   transform: scale(1.1);
+}
+.card-body {
+  color: #fff;
+}
+@media only screen and (max-width: 991px) and (min-width: 750px) and (orientation: landscape) {
+  .article {
+    height: 500px;
+  }
 }

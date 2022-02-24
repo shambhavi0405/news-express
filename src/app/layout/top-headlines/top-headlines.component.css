@@ -18,3 +18,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media only screen and (max-width: 540px) {
+  .top-headline .image {
+    height: 400px;
+    min-height: 400px;
+  }
+}
